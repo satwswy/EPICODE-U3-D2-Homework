@@ -7,10 +7,10 @@ class LatestRelease extends Component {
         return (
             <Container>
                 <Row className="justify-content-center mt-3">
-                    <Col xs={12} md={6}>
+                    <Col xs={12} sm={6} md={4} lg={3} >
                         {
                             bookArray.map(book => {
-                                return <Card>
+                                return <Card key={book.asin}>
                                     <Card.Img variant="top" src={book.img} />
                                     <Card.Body>
                                         <Card.Title>{book.title}</Card.Title>
