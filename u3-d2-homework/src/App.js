@@ -1,20 +1,20 @@
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import "bootstrap/dist/css/bootstrap.min.css"
-import MyNav from "./components/MyNav"
+import LatestReleases from './components/LatestReleases';
 import MyFooter from './components/MyFooter';
-import Welcome from './components/Welcome';
-import LatestRelease from './components/LatestRelease';
-import fantasyBooks from "./data/fantasy.json"
+import MyJumbotron from './components/MyJumbotron';
+import MyNav from './components/MyNav';
 
 
 function App() {
   return (
     <>
-    <MyNav />
-    <Welcome />
-    <LatestRelease />
-    <MyFooter />
-    </>
+   <MyNav />
+   <MyFooter />
+   <MyJumbotron />
+   <LatestReleases />
+   </>
   );
 }
 

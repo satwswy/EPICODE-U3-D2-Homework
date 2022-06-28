@@ -1,34 +1,18 @@
-import { Component } from "react";
-import { Card, Button, Container, Row, Col } from "react-bootstrap"
-import bookArray from "../data/scifi.json"
-
-class LatestRelease extends Component {
-    render() {
-        return (
-            <Container>
-                <Row className="justify-content-center mt-3">
-                    
-                        {
-                            bookArray.map(book => {
-                                return (
-                                <Col key={book.asin} xs={12} sm={6} md={4} lg={3} >
-                                <Card >
-                                    <Card.Img variant="top" src={book.img} />
-                                    <Card.Body>
-                                        <Card.Title>{book.title}</Card.Title>
-                                        <Card.Text>
-                                            {book.category}
-                                        </Card.Text>
-                                    </Card.Body>
-                                </Card>
-                                </Col>
-                            )})
-                        }
-
-                    
-                </Row>
-            </Container>
-        )
-    }
+import React from 'react'
+import fantasy from '../data/fantasy.json'
+import { Card } from 'react-bootstrap'
+export default function LatestReleases() {
+    return <div className='d-flex flex-wrap'>{
+        fantasy.map(book => {
+            // return <img className='book-cover' src={book.img}/>
+            return <Card className='book-cover'>
+            <Card.Img variant="top" src={book.img} />
+            <Card.Body>
+              <Card.Title>
+                {book.title}
+                </Card.Title>
+            </Card.Body>
+          </Card>
+        })
+        }</div>
 }
-export default LatestRelease

@@ -1,18 +1,7 @@
+import React from 'react';
 
-const MyFooter = () => {
-    return (
-
-        <footer>
-            <ul>
-                <li className="list-inline-item"><a href="#">Home</a></li>
-                <li className="list-inline-item"><a href="#">Services</a></li>
-                <li className="list-inline-item"><a href="#">About</a></li>
-                <li className="list-inline-item"><a href="#">Terms</a></li>
-                <li className="list-inline-item"><a href="#">Privacy Policy</a></li>
-            </ul>
-        </footer>
- 
-    )
+export default function MyFooter() {
+    return <footer className='d-flex bg-dark'>
+        <span className='text-white m-auto'>Strive School-Copyright 2021</span>
+    </footer>
 }
-
-export default MyFooter
